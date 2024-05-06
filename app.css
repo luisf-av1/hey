@@ -2,9 +2,9 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:800);
 .text {
   fill: none;
-  stroke-width: 3;
+  stroke-width: 2;
   stroke-linejoin: round;
-  stroke-dasharray: 70 330;
+  stroke-dasharray: 60 320;
   stroke-dashoffset: 0;
   -webkit-animation: stroke 6s infinite linear;
   animation: stroke 6s infinite linear;
