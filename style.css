@@ -1,50 +1,58 @@
-body {
+body{
+    min-height: 100vh;
     margin: 0;
     padding: 0;
-    background-color: #3498db; /* Light blue background */
-}
-
-.sunflower-container {
-    width: 400px; /* Adjust size as desired */
-    height: 400px;
-    margin: 100px auto;
-    border-radius: 50%;
-    position: relative;
-}
-
-.center-circle {
-    width: 100px;
-    height: 100px;
-    background-color: #ffd700; /* Yellow center */
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.petal {
-    width: 50px;
-    height: 100px;
-    background-color: #f1c40f; /* Orange for petals */
-    border-radius: 0 50% 50% 0;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.petal--left {
-    transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-.petal--right {
-    transform: translate(-50%, -50%) rotate(135deg);
-}
-
-.petal--top {
-    transform: translate(-50%, -50%) rotate(225deg);
-}
-
-.petal--bottom {
-    transform: translate(-50%, -50%) rotate(315deg);
-}
+    background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/textured_paper_%402X.png);
+    background-blend-mode: multiply;
+    background-color: #e2d8d0;
+    background-repeat: repeat;
+    background-size: 800px;
+  }
+  
+  svg {
+    height: 80vh;
+    width: 100%;
+    margin-top: 10vh;
+    opacity: 0.9
+  }
+  
+  #illustration {
+     animation: squigglevision 0.5s infinite alternate;
+  }
+  
+  @keyframes squigglevision {
+    0% {
+      filter: url('#sketch-0');
+    }
+    25% {
+      filter: url('#sketch-1');
+    }
+    50% {
+      filter: url('#sketch-2');
+    }
+    75% {
+      filter: url('#sketch-3');
+    }
+    100% {
+      filter: url('#sketch-4');
+    }
+  }
+  
+  .path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: paint 1s ease-in-out 1s forwards;
+  }
+  
+  .path:nth-of-type(2) {
+    animation-delay: 2s;
+  }
+  
+  @keyframes paint {
+    from {
+      stroke-dashoffset: 1; 
+    }
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
