@@ -1,48 +1,56 @@
 body {
-	background-color: #ff4814;
-  }
-  
-  .container {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	margin-left: -64.5px;
-	margin-top: -85.5px;
-  }
-  
-  .ghost {
-	animation: float 3s ease-out infinite;
-  }
-  
-  @keyframes float {
-	50% {
-	  transform: translate(0, 20px);
-	}
-  }
-  .shadowFrame {
-	width: 130px;
-	margin-top: 15px;
-  }
-  .shadow {
-	animation: shrink 3s ease-out infinite;
-	transform-origin: center center;
-	ellipse {
-	  transform-origin: center center;
-	}
-  }
-  
-  @keyframes shrink {
-	0% {
-	  width: 90%;
-	  margin: 0 5%;
-	}
-	50% {
-	  width: 60%;
-	  margin: 0 18%;
-	}
-	100% {
-	  width: 90%;
-	  margin: 0 5%;
-	}
-  }
-  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #87CEEB; /* Sky blue background */
+}
+
+.sunflower {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60px;
+    height: 60px;
+    background-color: #6B4226; /* Brown center */
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.petals {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 200px;
+    transform: translate(-50%, -50%);
+}
+
+.petal {
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    background-color: #FFD700; /* Golden petals */
+    border-radius: 20px 20px 0 0;
+    transform-origin: 30px 60px;
+}
+
+.petal:nth-child(1)  { transform: rotate(0deg);    top: 10px; left: 70px; }
+.petal:nth-child(2)  { transform: rotate(30deg);   top: 20px; left: 120px; }
+.petal:nth-child(3)  { transform: rotate(60deg);   top: 50px; left: 150px; }
+.petal:nth-child(4)  { transform: rotate(90deg);   top: 90px; left: 160px; }
+.petal:nth-child(5)  { transform: rotate(120deg);  top: 130px; left: 150px; }
+.petal:nth-child(6)  { transform: rotate(150deg);  top: 160px; left: 120px; }
+.petal:nth-child(7)  { transform: rotate(180deg);  top: 170px; left: 70px; }
+.petal:nth-child(8)  { transform: rotate(210deg);  top: 160px; left: 20px; }
+.petal:nth-child(9)  { transform: rotate(240deg);  top: 130px; left: -10px; }
+.petal:nth-child(10) { transform: rotate(270deg);  top: 90px; left: -20px; }
+.petal:nth-child(11) { transform: rotate(300deg);  top: 50px; left: -10px; }
+.petal:nth-child(12) { transform: rotate(330deg);  top: 20px; left: 20px; }
