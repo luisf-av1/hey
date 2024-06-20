@@ -1,4 +1,4 @@
-.video-container {
+/* .video-container {
   position: relative;
   width: 0;
   height: 0;
@@ -8,10 +8,10 @@
   position: absolute;
   top: -9999px;
   left: -9999px;
-}
+} */
 
 body{
-  background-color:#78e08f;
+  background-color:#af78e0;
   margin:0;
 }
 
